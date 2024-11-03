@@ -28,8 +28,7 @@ The RequirementTracker system consists of the following components:
 2. **Parser and Analyzer**: Tools to interpret labels and analyze coverage across requirements, design documents, code, and tests.
 3. **Documentation Generator**: Generates human-readable documentation and visual representations, such as graphs of dependencies and relationships.
 4. **AI Prompt Generator**: Creates context-aware prompts for AI-assisted coding tools.
-
-## Components Detail
+5. **Language Server Protocol (LSP) Implementation**: A language server that provides language-agnostic support for controlled language comments/annotations placed inside multiline comments.
 
 ### 1. Labeling System
 
@@ -53,6 +52,13 @@ The RequirementTracker system consists of the following components:
 
 - **Integration**: Works with AI coding tools to enhance development efficiency by generating prompts related to specific requirements, tests, or documentation items.
 - **Function**: Analyzes context and generates useful prompts for tasks such as code writing, refactoring, and test creation, reducing manual effort.
+
+### 5. Language Server Protocol (LSP) Implementation
+
+- **Purpose**: The LSP server provides language-agnostic support for controlled language comments/annotations placed inside multiline comments.
+- **Benefits**: Enhances the user experience by detecting the language from the file extension and parsing the contents of multiline comments.
+- **Implementation**: The LSP server will be implemented using the `vscode-languageserver` library and will include handlers for basic LSP features like `initialize`, `textDocument/didOpen`, and `textDocument/didChange`.
+- **Controlled Language Comments**: The LSP server will detect the language from the file extension and look up the corresponding multiline comment syntax to parse the controlled language comments/annotations.
 
 ## Implementation Plan
 
@@ -79,5 +85,3 @@ The RequirementTracker system consists of the following components:
 ## Conclusion
 
 By providing a standardized approach to documentation and coverage tracking, RequirementTracker aims to enhance software quality and development efficiency. This approach aligns requirements, design, code, and tests, ensuring comprehensive and traceable coverage, with the added benefit of AI-assisted development.
-
-

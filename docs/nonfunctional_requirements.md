@@ -82,6 +82,18 @@ This document defines the non-functional requirements (NFRs) for RequirementTrac
 - **Rationale**: Integration capabilities enhance usability within existing development environments.
 - **Metrics**: The system should support integration with at least three major CI/CD tools (e.g., Jenkins, GitHub Actions, GitLab CI). User feedback on integration ease should be rated at least 4 out of 5.
 
+## NFR-14: LSP Performance and Compatibility
+
+- **Description**: The Language Server Protocol (LSP) implementation shall perform efficiently and be compatible with various programming languages.
+- **Rationale**: Ensures the LSP server enhances the user experience without causing performance issues.
+- **Metrics**: The LSP server should initialize within 2 seconds and handle file changes in under 1 second for projects with up to 10,000 lines of code. The LSP server should support at least three different programming languages.
+
+## NFR-15: LSP Language Agnosticism and Multiline Comment Handling
+
+- **Description**: The LSP server shall be language agnostic and handle controlled language comments/annotations placed inside multiline comments.
+- **Rationale**: Enhances the user experience by detecting the language from the file extension and parsing the contents of multiline comments.
+- **Metrics**: The LSP server should correctly detect the language from the file extension and parse multiline comments for at least three different programming languages.
+
 ---
 
 These non-functional requirements set the quality expectations for RequirementTracker, providing specific, measurable targets to guide development, testing, and evaluation. Each requirement addresses a key aspect of system performance, compatibility, usability, and scalability to ensure the tool meets user needs effectively and efficiently.

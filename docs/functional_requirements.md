@@ -135,6 +135,19 @@ This document outlines the functional requirements for the RequirementTracker to
 
 - **Dependencies**: FR-2.1
 
+### FR-2.6: Implement Language Server Protocol (LSP)
+
+- **Description**: Develop a language server using the `vscode-languageserver` library to provide language-agnostic support for controlled language comments/annotations placed inside multiline comments.
+
+- **Rationale**: Enhances the user experience by detecting the language from the file extension and parsing the contents of multiline comments.
+
+- **Success Criteria**:
+  - The LSP server is implemented and integrated with the project.
+  - The LSP server can detect the language from the file extension and parse multiline comments.
+  - The LSP server includes handlers for basic LSP features like `initialize`, `textDocument/didOpen`, and `textDocument/didChange`.
+
+- **Dependencies**: NFR-13
+
 ---
 
 ## FR-3: Build Analyzer
@@ -452,4 +465,3 @@ This document outlines the functional requirements for the RequirementTracker to
 ---
 
 By incorporating detailed descriptions, success criteria, priorities, dependencies, and examples, this document serves as a comprehensive guide for implementing RequirementTracker. It ensures that all stakeholders have a clear understanding of the project's scope, objectives, and the specific tasks required to achieve them.
-
