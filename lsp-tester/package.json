@@ -1,0 +1,16 @@
+{
+  "name": "lsp-tester",
+  "version": "1.0.0",
+  "description": "A testing suite for the LSP server",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "RequirementTracker Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "jest": "^26.6.3",
+    "@types/jest": "^26.0.20"
+  }
+}
